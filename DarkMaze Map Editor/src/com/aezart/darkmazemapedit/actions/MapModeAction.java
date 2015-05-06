@@ -4,16 +4,21 @@ import java.awt.event.ActionEvent;
 
 import javax.swing.AbstractAction;
 
-public class MapModeAction extends AbstractAction{
+import com.aezart.darkmazemapedit.GUI;
+import com.aezart.darkmazemapedit.GUI.EditingMode;
 
-	public MapModeAction(){
+public class MapModeAction extends AbstractAction{
+	GUI gui;
+	public MapModeAction(GUI gui){
 		super("図");
+		this.gui = gui;
+
 		putValue(SHORT_DESCRIPTION, "Map");
 
 	}
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		// TODO Auto-generated method stub
+		gui.setEditingMode(EditingMode.MAP_MODE);
 		
 	}
 
