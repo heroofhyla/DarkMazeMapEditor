@@ -34,7 +34,6 @@ public class MapMouseListener implements MouseListener, MouseMotionListener{
 
 	@Override
 	public void mousePressed(MouseEvent e) {
-		System.out.println("pressed!");
 		paintingWalls = !gui.getTileState(currentXTile, currentYTile);
 		gui.alertPaint(currentXTile, currentYTile);
 		painting = true;

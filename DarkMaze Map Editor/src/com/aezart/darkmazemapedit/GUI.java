@@ -2,13 +2,19 @@ package com.aezart.darkmazemapedit;
 
 import java.awt.BorderLayout;
 import java.awt.Dimension;
+import java.util.ArrayList;
 
+import javax.swing.AbstractAction;
+import javax.swing.ButtonGroup;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
+import javax.swing.JToggleButton;
 import javax.swing.JToolBar;
+
+import com.aezart.darkmazemapedit.actions.*;
 
 public class GUI {
 	JFrame frame;
@@ -28,11 +34,19 @@ public class GUI {
 		menuBar.add(fileMenu);
 		JToolBar tools = new JToolBar(JToolBar.VERTICAL);
 		//TODO: Button icons!
-		tools.add(createJButton("図", "Map"));
-		tools.add(createJButton("人", "Enemies"));
-		tools.add(createJButton("光", "Light Sources"));
-		tools.add(createJButton("円", "Coins"));
-		tools.add(createJButton("火", "Powerups"));
+		ButtonGroup toolButtonsGroup = new ButtonGroup();
+		ArrayList<JToggleButton> toolButtons = new ArrayList<JToggleButton>();
+		toolButtons.add(new JToggleButton(new MapModeAction()));
+		toolButtons.add(new JToggleButton(new EnemyModeAction()));
+		toolButtons.add(new JToggleButton(new LightModeAction()));
+		toolButtons.add(new JToggleButton(new CoinModeAction()));
+		toolButtons.add(new JToggleButton(new PowerupModeAction()));
+		toolButtons.get(0).setSelected(true);
+		for (JToggleButton b: toolButtons){
+			tools.add(b);
+			toolButtonsGroup.add(b);
+		}
+		
 		tools.setFloatable(false);
 		frame = new JFrame();
 		frame.setLayout(new BorderLayout());
@@ -50,13 +64,7 @@ public class GUI {
 
 		frame.setVisible(true);
 	}
-	
-	public JButton createJButton(String text, String toolTip){
-		JButton btn = new JButton(text);
-		btn.setToolTipText(toolTip);
-		return btn;
-	}
-	
+		
 	public int mouseXTile(){
 		return mouseInfo.currentXTile;
 	}
