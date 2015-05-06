@@ -7,4 +7,8 @@ public class MapModel {
 	public void toggleTile(int x, int y){
 		mapTiles[y][x] = !mapTiles[y][x];
 	}
+	
+	public void setTile(int x, int y, boolean b){
+		mapTiles[y][x] = b;
+	}
 }

@@ -76,7 +76,7 @@ public class GUI {
 	}
 	
 	public void alertPaint(int xTile, int yTile){
-		mapModel.toggleTile(xTile, yTile);
+		mapModel.setTile(xTile, yTile, mouseInfo.paintingWalls);
 		mapView.mapUpdated(xTile, yTile, getTileState(xTile,yTile));
 		frame.repaint();
 	}

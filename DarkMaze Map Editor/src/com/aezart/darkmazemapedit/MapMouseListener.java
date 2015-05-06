@@ -6,6 +6,7 @@ import java.awt.event.MouseMotionListener;
 
 public class MapMouseListener implements MouseListener, MouseMotionListener{
 	public boolean painting = false;
+	public boolean paintingWalls = false;
 	int currentXTile = 0;
 	int currentYTile = 0;
 	GUI gui;
@@ -15,7 +16,7 @@ public class MapMouseListener implements MouseListener, MouseMotionListener{
 	@Override
 	public void mouseClicked(MouseEvent e) {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	@Override
@@ -28,12 +29,13 @@ public class MapMouseListener implements MouseListener, MouseMotionListener{
 	public void mouseExited(MouseEvent e) {
 		currentXTile = -1;
 		currentYTile = -1;	
-		System.out.println("Mouse exited map");
 		gui.alertMouseMove();
 	}
 
 	@Override
 	public void mousePressed(MouseEvent e) {
+		System.out.println("pressed!");
+		paintingWalls = !gui.getTileState(currentXTile, currentYTile);
 		gui.alertPaint(currentXTile, currentYTile);
 		painting = true;
 	}
