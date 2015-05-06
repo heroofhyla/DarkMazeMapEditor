@@ -53,7 +53,9 @@ public class MapMouseListener implements MouseListener, MouseMotionListener{
 			currentXTile = e.getX()/32;
 			currentYTile = e.getY()/32;
 			gui.alertMouseMove();
-			gui.alertPaint(currentXTile, currentYTile);
+			if (currentXTile >= 0 && currentXTile < 19 && currentYTile >= 0 && currentYTile < 15){
+				gui.alertPaint(currentXTile, currentYTile);
+			}
 		}		
 	}
 

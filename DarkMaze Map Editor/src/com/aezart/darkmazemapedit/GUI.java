@@ -70,8 +70,6 @@ public class GUI {
 	}
 	
 	public boolean mouseInMap(){
-		System.out.println(mouseInfo.currentXTile);
-		System.out.println(mouseInfo.currentYTile);
 		return (mouseInfo.currentXTile >= 0 && mouseInfo.currentYTile >= 0);
 	}
 	
