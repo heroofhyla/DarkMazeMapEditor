@@ -10,7 +10,7 @@ import com.aezart.darkmaze.editor.GUI.EditingMode;
 public class PowerupModeAction extends AbstractAction{
 	GUI gui;
 	public PowerupModeAction(GUI gui){
-		super("ç?«");
+		super("ç«");
 		this.gui = gui;
 		putValue(SHORT_DESCRIPTION, "Powerups");
 	}

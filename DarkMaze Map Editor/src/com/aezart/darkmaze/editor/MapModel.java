@@ -5,7 +5,11 @@ import com.aezart.darkmaze.map.Map;
 
 public class MapModel {
 	//remember that arrays are stored [row][column]	
-	Map map;
+	public Map map;
+	
+	public MapModel(){
+		map = new Map();
+	}
 	public void toggleTile(EditingMode e, int x, int y){
 		boolean[][] layer = editingLayer(e);
 		

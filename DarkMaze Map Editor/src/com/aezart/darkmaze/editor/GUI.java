@@ -22,7 +22,7 @@ public class GUI {
 		COIN_MODE,
 		POWERUP_MODE
 	}
-	JFrame frame;
+	public JFrame frame;
 	MapView mapView;
 	MapMouseListener mouseInfo;
 	MapModel mapModel;
@@ -33,7 +33,7 @@ public class GUI {
 		JMenuBar menuBar = new JMenuBar();
 		JMenu fileMenu = new JMenu("File");
 		fileMenu.add(new JMenuItem("New"));
-		fileMenu.add(new JMenuItem("Save"));
+		fileMenu.add(new JMenuItem(new SaveAction(mapModel, this)));
 		fileMenu.add(new JMenuItem("Open"));
 		fileMenu.add(new JMenuItem("Export"));
 		fileMenu.add(new JMenuItem("Exit"));
