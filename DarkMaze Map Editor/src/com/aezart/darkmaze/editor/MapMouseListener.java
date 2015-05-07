@@ -1,10 +1,10 @@
-package com.aezart.darkmazemapedit;
+package com.aezart.darkmaze.editor;
 
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.awt.event.MouseMotionListener;
 
-import com.aezart.darkmazemapedit.GUI.EditingMode;
+import com.aezart.darkmaze.editor.GUI.EditingMode;
 
 public class MapMouseListener implements MouseListener, MouseMotionListener{
 	public boolean painting = false;

@@ -1,11 +1,11 @@
-package com.aezart.darkmazemapedit.actions;
+package com.aezart.darkmaze.editor.actions;
 
 import java.awt.event.ActionEvent;
 
 import javax.swing.AbstractAction;
 
-import com.aezart.darkmazemapedit.GUI;
-import com.aezart.darkmazemapedit.GUI.EditingMode;
+import com.aezart.darkmaze.editor.GUI;
+import com.aezart.darkmaze.editor.GUI.EditingMode;
 
 public class CoinModeAction extends AbstractAction{
 	GUI gui;

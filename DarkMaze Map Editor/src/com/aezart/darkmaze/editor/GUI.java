@@ -1,4 +1,4 @@
-package com.aezart.darkmazemapedit;
+package com.aezart.darkmaze.editor;
 
 import java.awt.BorderLayout;
 import java.awt.Dimension;
@@ -12,7 +12,7 @@ import javax.swing.JMenuItem;
 import javax.swing.JToggleButton;
 import javax.swing.JToolBar;
 
-import com.aezart.darkmazemapedit.actions.*;
+import com.aezart.darkmaze.editor.actions.*;
 
 public class GUI {
 	public enum EditingMode{

@@ -1,4 +1,4 @@
-package com.aezart.darkmazemapedit;
+package com.aezart.darkmaze.editor;
 
 public class DarkMazeMapEdit {
 	public static void main(String[] args){

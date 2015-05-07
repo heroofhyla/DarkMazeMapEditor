@@ -1,7 +1,7 @@
 eclipse.preferences.version=1
-encoding//src/com/aezart/darkmazemapedit/GUI.java=UTF-8
-encoding//src/com/aezart/darkmazemapedit/actions/CoinModeAction.java=UTF-8
-encoding//src/com/aezart/darkmazemapedit/actions/EnemyModeAction.java=UTF-8
-encoding//src/com/aezart/darkmazemapedit/actions/LightModeAction.java=UTF-8
-encoding//src/com/aezart/darkmazemapedit/actions/MapModeAction.java=UTF-8
-encoding//src/com/aezart/darkmazemapedit/actions/PowerupModeAction.java=UTF-8
+encoding//src/com/aezart/darkmaze/editor/GUI.java=UTF-8
+encoding//src/com/aezart/darkmaze/editor/actions/CoinModeAction.java=UTF-8
+encoding//src/com/aezart/darkmaze/editor/actions/EnemyModeAction.java=UTF-8
+encoding//src/com/aezart/darkmaze/editor/actions/LightModeAction.java=UTF-8
+encoding//src/com/aezart/darkmaze/editor/actions/MapModeAction.java=UTF-8
+encoding//src/com/aezart/darkmaze/editor/actions/PowerupModeAction.java=UTF-8

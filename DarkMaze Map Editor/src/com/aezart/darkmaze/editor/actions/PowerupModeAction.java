@@ -1,16 +1,16 @@
-package com.aezart.darkmazemapedit.actions;
+package com.aezart.darkmaze.editor.actions;
 
 import java.awt.event.ActionEvent;
 
 import javax.swing.AbstractAction;
 
-import com.aezart.darkmazemapedit.GUI;
-import com.aezart.darkmazemapedit.GUI.EditingMode;
+import com.aezart.darkmaze.editor.GUI;
+import com.aezart.darkmaze.editor.GUI.EditingMode;
 
 public class PowerupModeAction extends AbstractAction{
 	GUI gui;
 	public PowerupModeAction(GUI gui){
-		super("ÁÅ´");
+		super("Á?´");
 		this.gui = gui;
 		putValue(SHORT_DESCRIPTION, "Powerups");
 	}

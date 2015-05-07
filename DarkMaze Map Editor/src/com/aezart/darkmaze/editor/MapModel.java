@@ -1,15 +1,11 @@
-package com.aezart.darkmazemapedit;
+package com.aezart.darkmaze.editor;
 
-import com.aezart.darkmazemapedit.GUI.EditingMode;
+import com.aezart.darkmaze.editor.GUI.EditingMode;
+import com.aezart.darkmaze.map.Map;
 
 public class MapModel {
-	//remember that arrays are stored [row][column]
-	boolean[][] mapTiles = new boolean[15][19];
-	boolean[][] enemyLocations = new boolean[30][38];
-	boolean[][] coinLocations = new boolean[15][19];
-	boolean[][] lightLocations = new boolean[15][19];
-	boolean[][] powerupLocations = new boolean[15][19];
-	
+	//remember that arrays are stored [row][column]	
+	Map map;
 	public void toggleTile(EditingMode e, int x, int y){
 		boolean[][] layer = editingLayer(e);
 		
@@ -24,17 +20,17 @@ public class MapModel {
 	private boolean[][] editingLayer(EditingMode e){
 		switch (e){
 		case MAP_MODE:
-			return mapTiles;
+			return map.mapTiles;
 		case ENEMY_MODE:
-			return enemyLocations;
+			return map.enemyLocations;
 		case LIGHT_MODE:
-			return lightLocations;
+			return map.lightLocations;
 		case COIN_MODE:
-			return coinLocations;
+			return map.coinLocations;
 		case POWERUP_MODE:
-			return powerupLocations;
+			return map.powerupLocations;
 		default:
-			return mapTiles;
+			return map.mapTiles;
 		}
 	}
 

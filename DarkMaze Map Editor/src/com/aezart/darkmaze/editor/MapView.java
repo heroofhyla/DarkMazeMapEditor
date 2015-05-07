@@ -1,4 +1,4 @@
-package com.aezart.darkmazemapedit;
+package com.aezart.darkmaze.editor;
 
 import java.awt.AlphaComposite;
 import java.awt.Color;
@@ -11,7 +11,7 @@ import java.io.IOException;
 import javax.imageio.ImageIO;
 import javax.swing.JPanel;
 
-import com.aezart.darkmazemapedit.GUI.EditingMode;
+import com.aezart.darkmaze.editor.GUI.EditingMode;
 
 public class MapView extends JPanel{
 	boolean initialized = false;
